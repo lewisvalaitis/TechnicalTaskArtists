@@ -34,10 +34,22 @@ extension ArtistsViewModel {
     }
     
     func transform(input: ArtistsInput) -> ArtistsOutputProtocol {
-        let artistCellModels = apiClient.fetchArtists()
-            .flatMapLatest { artists -> Observable<[ArtistCellModel]> in
-                let cellModels = artists.map { ArtistCellModel(nameText: $0.name) }
-                return .just(cellModels)
+        let artistCellModels = input.searchText
+            .flatMapLatest { name -> Observable<[ArtistCellModel]> in
+                print("****")
+                return apiClient.fetchArtists(withName: name ?? "")
+                    .catch { error -> Observable<[Artist]> in
+                        switch error {
+                        case APIClientError.data(let error): print("Data Error: \(error)")
+                        case APIClientError.url: print("URL Error")
+                        default: print(error)
+                        }
+                        return .just([])
+                    }
+                    .flatMapLatest { artists -> Observable<[ArtistCellModel]> in
+                        let cellModels = artists.map { ArtistCellModel(nameText: $0.name) }
+                        return .just(cellModels)
+                    }
             }
             .asDriver(onErrorDriveWith: .empty())
         

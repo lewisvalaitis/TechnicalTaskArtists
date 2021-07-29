@@ -18,13 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               let navController = scene.windows.first?.rootViewController as? UINavigationController,
               let artistsVC = navController.viewControllers.first as? ArtistsViewController else { fatalError("Scene delegate.") }
         
-        struct MockAPIClient: APIClientProtocol {
-            func fetchArtists() -> Observable<[Artist]> {
-                return .just([Artist(name: "Louis Capaldi"), Artist(name: "Maneskins"), Artist(name: "Ed Sheeran")])
-            }
-        }
         
-        let viewModel = ArtistsViewModel(apiClient: MockAPIClient())
+        let viewModel = ArtistsViewModel(apiClient: APIClient())
         artistsVC.viewModel = viewModel
         
     }

@@ -1,5 +1,5 @@
 //
-//  Artist.swift
+//  Response.swift
 //  TechnicalTaskArtists
 //
 //  Created by Lewis Valaitis on 29/07/2021.
@@ -7,8 +7,6 @@
 
 import Foundation
 
-// MARK: - Artist
-
-struct Artist: Decodable {
-    var name: String
+struct Response: Decodable {
+    var artists: [Artist]?
 }

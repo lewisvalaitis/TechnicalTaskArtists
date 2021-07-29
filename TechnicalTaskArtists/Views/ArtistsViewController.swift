@@ -22,7 +22,6 @@ class ArtistsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let searchText = searchBar.rx.text.asObservable()
         let input = ArtistsInput(searchText: searchText)
         let output = viewModel.transform(input: input)
