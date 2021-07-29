@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		F62293A326B2831900A37035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62293A126B2831900A37035 /* LaunchScreen.storyboard */; };
 		F62293AE26B2831900A37035 /* TechnicalTaskArtistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293AD26B2831900A37035 /* TechnicalTaskArtistsTests.swift */; };
 		F62293B926B2831900A37035 /* TechnicalTaskArtistsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293B826B2831900A37035 /* TechnicalTaskArtistsUITests.swift */; };
+		F62293CA26B2878E00A37035 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293C926B2878E00A37035 /* ArtistsViewModel.swift */; };
+		F62293CC26B2893A00A37035 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293CB26B2893A00A37035 /* Artist.swift */; };
+		F62293CE26B28A4900A37035 /* ArtistCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293CD26B28A4900A37035 /* ArtistCellModel.swift */; };
 		FCCCEBD4107B093C86AD2376 /* Pods_TechnicalTaskArtists_TechnicalTaskArtistsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD16FBEFF0C6AC1BFFCFCB0 /* Pods_TechnicalTaskArtists_TechnicalTaskArtistsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		F62293B426B2831900A37035 /* TechnicalTaskArtistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechnicalTaskArtistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62293B826B2831900A37035 /* TechnicalTaskArtistsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalTaskArtistsUITests.swift; sourceTree = "<group>"; };
 		F62293BA26B2831900A37035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F62293C926B2878E00A37035 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
+		F62293CB26B2893A00A37035 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		F62293CD26B28A4900A37035 /* ArtistCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCellModel.swift; sourceTree = "<group>"; };
 		F89F10685FBEB2EA4DE14097 /* Pods-TechnicalTaskArtists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnicalTaskArtists.release.xcconfig"; path = "Target Support Files/Pods-TechnicalTaskArtists/Pods-TechnicalTaskArtists.release.xcconfig"; sourceTree = "<group>"; };
 		FD378F337532EC9A87BFABE1 /* Pods_TechnicalTaskArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechnicalTaskArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,7 +107,6 @@
 				561C35F20032CD8394F5BD85 /* Pods-TechnicalTaskArtistsTests.debug.xcconfig */,
 				809DC1F8A8C192EE2099C9D5 /* Pods-TechnicalTaskArtistsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,9 +145,11 @@
 		F622939526B2831600A37035 /* TechnicalTaskArtists */ = {
 			isa = PBXGroup;
 			children = (
+				F62293C626B286A600A37035 /* Models */,
+				F62293C726B286AF00A37035 /* ViewModels */,
+				F62293C826B286BE00A37035 /* Views */,
 				F622939626B2831600A37035 /* AppDelegate.swift */,
 				F622939826B2831600A37035 /* SceneDelegate.swift */,
-				F622939A26B2831600A37035 /* ViewController.swift */,
 				F622939C26B2831600A37035 /* Main.storyboard */,
 				F622939F26B2831900A37035 /* Assets.xcassets */,
 				F62293A126B2831900A37035 /* LaunchScreen.storyboard */,
@@ -167,6 +174,31 @@
 				F62293BA26B2831900A37035 /* Info.plist */,
 			);
 			path = TechnicalTaskArtistsUITests;
+			sourceTree = "<group>";
+		};
+		F62293C626B286A600A37035 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F62293CB26B2893A00A37035 /* Artist.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F62293C726B286AF00A37035 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F62293C926B2878E00A37035 /* ArtistsViewModel.swift */,
+				F62293CD26B28A4900A37035 /* ArtistCellModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F62293C826B286BE00A37035 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F622939A26B2831600A37035 /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +439,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62293CE26B28A4900A37035 /* ArtistCellModel.swift in Sources */,
 				F622939B26B2831600A37035 /* ViewController.swift in Sources */,
 				F622939726B2831600A37035 /* AppDelegate.swift in Sources */,
 				F622939926B2831600A37035 /* SceneDelegate.swift in Sources */,
+				F62293CC26B2893A00A37035 /* Artist.swift in Sources */,
+				F62293CA26B2878E00A37035 /* ArtistsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
