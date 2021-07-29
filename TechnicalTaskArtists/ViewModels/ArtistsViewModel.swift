@@ -25,7 +25,22 @@ protocol ArtistsViewModelProtocol {
 
 // MARK: - Artists View Model
 struct ArtistsViewModel: ArtistsViewModelProtocol {
+    var apiClient: APIClientProtocol
+}
+
+extension ArtistsViewModel {
+    struct Output: ArtistsOutputProtocol {
+        var artists: Driver<[ArtistCellModel]>
+    }
+    
     func transform(input: ArtistsInput) -> ArtistsOutputProtocol {
-        <#code#>
+        let artistCellModels = apiClient.fetchArtists()
+            .flatMapLatest { artists -> Observable<[ArtistCellModel]> in
+                let cellModels = artists.map { _ in ArtistCellModel() }
+                return .just(cellModels)
+            }
+            .asDriver(onErrorDriveWith: .empty())
+        
+        return Output(artists: artistCellModels)
     }
 }

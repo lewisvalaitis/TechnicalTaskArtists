@@ -11,7 +11,7 @@
 		956BF648DF141658E661C916 /* Pods_TechnicalTaskArtistsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E5EA286DEE473FD7F4BD8F /* Pods_TechnicalTaskArtistsTests.framework */; };
 		F622939726B2831600A37035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622939626B2831600A37035 /* AppDelegate.swift */; };
 		F622939926B2831600A37035 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622939826B2831600A37035 /* SceneDelegate.swift */; };
-		F622939B26B2831600A37035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622939A26B2831600A37035 /* ViewController.swift */; };
+		F622939B26B2831600A37035 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F622939A26B2831600A37035 /* ArtistsViewController.swift */; };
 		F622939E26B2831600A37035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F622939C26B2831600A37035 /* Main.storyboard */; };
 		F62293A026B2831900A37035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F622939F26B2831900A37035 /* Assets.xcassets */; };
 		F62293A326B2831900A37035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62293A126B2831900A37035 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,7 @@
 		F62293CA26B2878E00A37035 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293C926B2878E00A37035 /* ArtistsViewModel.swift */; };
 		F62293CC26B2893A00A37035 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293CB26B2893A00A37035 /* Artist.swift */; };
 		F62293CE26B28A4900A37035 /* ArtistCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293CD26B28A4900A37035 /* ArtistCellModel.swift */; };
+		F62293D126B28B9000A37035 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293D026B28B9000A37035 /* APIClient.swift */; };
 		FCCCEBD4107B093C86AD2376 /* Pods_TechnicalTaskArtists_TechnicalTaskArtistsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD16FBEFF0C6AC1BFFCFCB0 /* Pods_TechnicalTaskArtists_TechnicalTaskArtistsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +52,7 @@
 		F622939326B2831600A37035 /* TechnicalTaskArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechnicalTaskArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F622939626B2831600A37035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F622939826B2831600A37035 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F622939A26B2831600A37035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F622939A26B2831600A37035 /* ArtistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
 		F622939D26B2831600A37035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F622939F26B2831900A37035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F62293A226B2831900A37035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		F62293C926B2878E00A37035 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		F62293CB26B2893A00A37035 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F62293CD26B28A4900A37035 /* ArtistCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCellModel.swift; sourceTree = "<group>"; };
+		F62293D026B28B9000A37035 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F89F10685FBEB2EA4DE14097 /* Pods-TechnicalTaskArtists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnicalTaskArtists.release.xcconfig"; path = "Target Support Files/Pods-TechnicalTaskArtists/Pods-TechnicalTaskArtists.release.xcconfig"; sourceTree = "<group>"; };
 		FD378F337532EC9A87BFABE1 /* Pods_TechnicalTaskArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechnicalTaskArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 		F622939526B2831600A37035 /* TechnicalTaskArtists */ = {
 			isa = PBXGroup;
 			children = (
+				F62293CF26B28B7C00A37035 /* Services */,
 				F62293C626B286A600A37035 /* Models */,
 				F62293C726B286AF00A37035 /* ViewModels */,
 				F62293C826B286BE00A37035 /* Views */,
@@ -196,9 +199,17 @@
 		F62293C826B286BE00A37035 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F622939A26B2831600A37035 /* ViewController.swift */,
+				F622939A26B2831600A37035 /* ArtistsViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F62293CF26B28B7C00A37035 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F62293D026B28B9000A37035 /* APIClient.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F62293CE26B28A4900A37035 /* ArtistCellModel.swift in Sources */,
-				F622939B26B2831600A37035 /* ViewController.swift in Sources */,
+				F62293D126B28B9000A37035 /* APIClient.swift in Sources */,
+				F622939B26B2831600A37035 /* ArtistsViewController.swift in Sources */,
 				F622939726B2831600A37035 /* AppDelegate.swift in Sources */,
 				F622939926B2831600A37035 /* SceneDelegate.swift in Sources */,
 				F62293CC26B2893A00A37035 /* Artist.swift in Sources */,
