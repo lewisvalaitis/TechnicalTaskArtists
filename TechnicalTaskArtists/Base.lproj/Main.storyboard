@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uzM-tJ-KuV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -7,19 +8,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Artists View Controller-->
+        <!--Artists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ArtistsViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Artists" id="BYZ-38-t0r" customClass="ArtistsViewController" customModule="TechnicalTaskArtists" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-ph-hR4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-34-WPC">
+                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eng-34-WPC" firstAttribute="top" secondItem="sJN-ph-hR4" secondAttribute="bottom" id="DII-4A-E3Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eng-34-WPC" secondAttribute="bottom" id="JF3-cf-BlH"/>
+                            <constraint firstItem="sJN-ph-hR4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SJV-OH-PhY"/>
+                            <constraint firstItem="sJN-ph-hR4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hFH-9t-AGf"/>
+                            <constraint firstItem="Eng-34-WPC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="riG-8G-kPc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eng-34-WPC" secondAttribute="trailing" id="sbf-ZI-Uoc"/>
+                            <constraint firstItem="sJN-ph-hR4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vMn-Bh-USV"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OBT-Nq-OKI"/>
+                    <connections>
+                        <outlet property="searchBar" destination="sJN-ph-hR4" id="ZEu-xx-O1W"/>
+                        <outlet property="tableView" destination="Eng-34-WPC" id="Ow3-wX-jyJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1029" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="elP-3t-JbV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uzM-tJ-KuV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="915-pz-wAM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iJm-Zp-ZPA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sun-Pg-e8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>

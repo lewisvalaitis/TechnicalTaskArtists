@@ -7,7 +7,12 @@
 
 import UIKit
 
+// MARK: - Artists View Controller
 class ArtistsViewController: UIViewController {
+    // MARK: Outlets
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    // MARK: Properties
     var viewModel: ArtistsViewModel!
     
     override func viewDidLoad() {

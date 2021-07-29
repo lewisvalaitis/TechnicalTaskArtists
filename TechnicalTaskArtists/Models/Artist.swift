@@ -10,5 +10,5 @@ import Foundation
 // MARK: - Artist
 
 struct Artist {
-    var name
+    var name: String
 }
