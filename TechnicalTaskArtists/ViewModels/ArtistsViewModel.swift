@@ -11,7 +11,7 @@ import RxCocoa
 
 // MARK: - Input / Output
 struct ArtistsInput {
-    var searchText: Observable<String>
+    var searchText: Observable<String?>
 }
 
 protocol ArtistsOutputProtocol {
@@ -36,7 +36,7 @@ extension ArtistsViewModel {
     func transform(input: ArtistsInput) -> ArtistsOutputProtocol {
         let artistCellModels = apiClient.fetchArtists()
             .flatMapLatest { artists -> Observable<[ArtistCellModel]> in
-                let cellModels = artists.map { _ in ArtistCellModel() }
+                let cellModels = artists.map { ArtistCellModel(nameText: $0.name) }
                 return .just(cellModels)
             }
             .asDriver(onErrorDriveWith: .empty())

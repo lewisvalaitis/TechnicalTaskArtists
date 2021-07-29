@@ -10,5 +10,5 @@ import Foundation
 // MARK: - Artist Cell Model
 
 struct ArtistCellModel {
-    
+    var nameText: String
 }
