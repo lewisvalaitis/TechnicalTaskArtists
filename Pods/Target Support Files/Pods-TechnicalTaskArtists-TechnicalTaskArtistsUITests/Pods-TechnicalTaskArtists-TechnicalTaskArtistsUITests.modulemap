@@ -1,0 +1,6 @@
+framework module Pods_TechnicalTaskArtists_TechnicalTaskArtistsUITests {
+  umbrella header "Pods-TechnicalTaskArtists-TechnicalTaskArtistsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
