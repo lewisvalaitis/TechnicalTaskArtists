@@ -19,9 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               let artistsVC = navController.viewControllers.first as? ArtistsViewController else { fatalError("Scene delegate.") }
         
         
+        let wireframe = Wireframe(navigationController: navController)
         let viewModel = ArtistsViewModel(apiClient: APIClient())
         artistsVC.viewModel = viewModel
-        
+        artistsVC.wireframe = wireframe
     }
 
 

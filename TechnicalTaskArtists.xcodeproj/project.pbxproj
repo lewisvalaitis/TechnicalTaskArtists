@@ -22,6 +22,9 @@
 		F62293CE26B28A4900A37035 /* ArtistCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293CD26B28A4900A37035 /* ArtistCellModel.swift */; };
 		F62293D126B28B9000A37035 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293D026B28B9000A37035 /* APIClient.swift */; };
 		F62293D526B2ECB600A37035 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293D426B2ECB600A37035 /* Response.swift */; };
+		F62293D826B3E63300A37035 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293D726B3E63200A37035 /* Wireframe.swift */; };
+		F62293DA26B3E9EA00A37035 /* ArtistDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293D926B3E9EA00A37035 /* ArtistDetailViewModel.swift */; };
+		F62293DC26B3EAD900A37035 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62293DB26B3EAD900A37035 /* ArtistDetailViewController.swift */; };
 		FCCCEBD4107B093C86AD2376 /* Pods_TechnicalTaskArtists_TechnicalTaskArtistsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD16FBEFF0C6AC1BFFCFCB0 /* Pods_TechnicalTaskArtists_TechnicalTaskArtistsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		F62293CD26B28A4900A37035 /* ArtistCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCellModel.swift; sourceTree = "<group>"; };
 		F62293D026B28B9000A37035 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F62293D426B2ECB600A37035 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		F62293D726B3E63200A37035 /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		F62293D926B3E9EA00A37035 /* ArtistDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewModel.swift; sourceTree = "<group>"; };
+		F62293DB26B3EAD900A37035 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		F89F10685FBEB2EA4DE14097 /* Pods-TechnicalTaskArtists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnicalTaskArtists.release.xcconfig"; path = "Target Support Files/Pods-TechnicalTaskArtists/Pods-TechnicalTaskArtists.release.xcconfig"; sourceTree = "<group>"; };
 		FD378F337532EC9A87BFABE1 /* Pods_TechnicalTaskArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechnicalTaskArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,6 +155,7 @@
 		F622939526B2831600A37035 /* TechnicalTaskArtists */ = {
 			isa = PBXGroup;
 			children = (
+				F62293D626B3E62200A37035 /* Wireframe */,
 				F62293CF26B28B7C00A37035 /* Services */,
 				F62293C626B286A600A37035 /* Models */,
 				F62293C726B286AF00A37035 /* ViewModels */,
@@ -194,6 +201,7 @@
 			children = (
 				F62293C926B2878E00A37035 /* ArtistsViewModel.swift */,
 				F62293CD26B28A4900A37035 /* ArtistCellModel.swift */,
+				F62293D926B3E9EA00A37035 /* ArtistDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F622939A26B2831600A37035 /* ArtistsViewController.swift */,
+				F62293DB26B3EAD900A37035 /* ArtistDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +238,14 @@
 				F62293D426B2ECB600A37035 /* Response.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F62293D626B3E62200A37035 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				F62293D726B3E63200A37035 /* Wireframe.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,9 +488,12 @@
 			files = (
 				F62293D526B2ECB600A37035 /* Response.swift in Sources */,
 				F62293CE26B28A4900A37035 /* ArtistCellModel.swift in Sources */,
+				F62293DA26B3E9EA00A37035 /* ArtistDetailViewModel.swift in Sources */,
+				F62293DC26B3EAD900A37035 /* ArtistDetailViewController.swift in Sources */,
 				F62293D126B28B9000A37035 /* APIClient.swift in Sources */,
 				F622939B26B2831600A37035 /* ArtistsViewController.swift in Sources */,
 				F622939726B2831600A37035 /* AppDelegate.swift in Sources */,
+				F62293D826B3E63300A37035 /* Wireframe.swift in Sources */,
 				F622939926B2831600A37035 /* SceneDelegate.swift in Sources */,
 				F62293CC26B2893A00A37035 /* Artist.swift in Sources */,
 				F62293CA26B2878E00A37035 /* ArtistsViewModel.swift in Sources */,

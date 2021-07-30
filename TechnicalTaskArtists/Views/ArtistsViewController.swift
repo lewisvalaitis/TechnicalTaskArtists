@@ -17,7 +17,8 @@ class ArtistsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
-    var viewModel: ArtistsViewModel!
+    var wireframe: WireframeProtocol!
+    var viewModel: ArtistsViewModelProtocol!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {

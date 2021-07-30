@@ -35,8 +35,7 @@ extension ArtistsViewModel {
     
     func transform(input: ArtistsInput) -> ArtistsOutputProtocol {
         let artistCellModels = input.searchText
-            .flatMapLatest { name -> Observable<[ArtistCellModel]> in
-                print("****")
+            .flatMapLatest { name -> Observable<[ArtistCellModel]> in   
                 return apiClient.fetchArtists(withName: name ?? "")
                     .catch { error -> Observable<[Artist]> in
                         switch error {
